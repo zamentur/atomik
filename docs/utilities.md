@@ -134,7 +134,7 @@ key in the field's array.
 
     if (($filteredData = $this->filter($dataToFilter, $fields)) === false) {
 	    // failed validation, showing messages
-	    Atomik::flash(Atomik::get('app.filters.messages'), 'error');
+	    Atomik::flash(join(".\n",Atomik::get('helpers.filters.messages')), 'error');
 	    return;
     }
 
